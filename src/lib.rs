@@ -1,4 +1,4 @@
-// 
+//
 // Written by mldkyt
 // MIT license
 //
@@ -8,7 +8,7 @@ impl Uwurandom {
     fn abs(i: i32) -> i32 {
         return if i < 0 { -i } else { i };
     }
-    pub fn generate(num: i128) -> String {
+    pub fn generate(num: i32) -> String {
         let actions = [
             "*tilts head*",
             "*twitches ears slightly*",
@@ -29,7 +29,7 @@ impl Uwurandom {
         ];
         let mut string = String::new();
 
-        while num > string.len() as i128 {
+        while num > string.len() as i32 {
             let random = Uwurandom::abs(rand::random::<i32>() % 10);
             match random {
                 0 => {
